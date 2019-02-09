@@ -3,15 +3,26 @@ var jukeBox = document.querySelector('ul.player');
 
 jukeBox.addEventListener('click', function(e) {
     var songName = e.target.getAttribute('data-src');
-    var songPlaying = document.querySelector('#player');
+    var audioPlayer = document.querySelector('#player');
 
-    if (songPlaying) {
-        if (songPlaying.paused) {
-            songPlaying.play();
-            e.target.id = 'playing';
+    if (audioPlayer) {
+            if (songName === audioPlayer.getAttribute('src')) {
+                if (audioPlayer.paused) {
+                audioPlayer.play();
+                e.target.id = 'playing';           
+            } else {
+                audioPlayer.pause();
+                e.target.id = 'paused';
+            }
         } else {
-            songPlaying.pause();
-            e.target.id = 'paused';
+            audioPlayer.src = songName;
+            audioPlayer.play();
+            if (document.querySelector('#playing')) {
+                document.querySelector('#playing').id = '';
+            } else {
+                document.querySelector('#paused').id = '';
+            }
+                e.target.id = 'playing';
         }
 
     } else {
