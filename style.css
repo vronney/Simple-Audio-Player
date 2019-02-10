@@ -4,8 +4,9 @@ body {
 }
 
 ul.player {
+	display: block;
 	width: 180px;
-	margin: 240px auto;
+	margin: 33.5vh auto; /* used to center player on screen */
 	/* margin-top: 100px; */
 	list-style: none;	
 }
