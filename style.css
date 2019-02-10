@@ -6,7 +6,7 @@ body {
 ul.player {
 	display: block;
 	width: 180px;
-	margin: 33.5vh auto; /* used to center player on screen */
+	margin: 36.5vh auto; /* used to center player on screen */
 	/* margin-top: 100px; */
 	list-style: none;	
 }
@@ -19,6 +19,7 @@ ul.player li {
 	background-color: #EAE3CB;
 	background-position: 9px 4px;
 	cursor: pointer;
+	text-transform: uppercase;	
 }
 
 ul.player li:first-child {
