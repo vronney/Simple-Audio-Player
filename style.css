@@ -6,7 +6,7 @@ body {
 ul.player {
 	display: block;
 	width: 180px;
-	margin: 40vh auto; /* used to center player on screen */
+	margin: 41vh auto; /* used to center player on screen */
 	/* margin-top: 100px; */
 	list-style: none;	
 }
